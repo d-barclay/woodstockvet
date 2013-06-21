@@ -81,7 +81,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	float: left;
 }
 .sidebar2 {
-	float: left;
+	float: right;
 	width: 180px;
 	background-color: #EADCAE;
 	padding: 10px 0;
@@ -139,6 +139,40 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 .container .header strong {
 	text-align: center;
 }
+
+#Catalog_Container {
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+border: 1px solid red; 
+width: 550px; 
+
+margin-top:25px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+overflow:hidden; /*float containment*/
+}
+#Box1, #Box2, #Box3 {
+	alignment-adjust:middle;
+
+ width: 175px;
+ height: 125px;
+ margin-top: 10px;
+ border: 1px solid red;
+ vertical-align: top;
+ display: inline-block;
+ *display: inline;
+ zoom: 1
+}
+
+/**Clear floats after the boxes**/
+.clearing {
+clear:both;
+visibility:hidden;
+line-height:0;
+font-size:1px; 
+display:block;
+}
+
 -->
 </style></head>
  <body>
