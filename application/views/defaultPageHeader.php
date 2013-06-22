@@ -141,7 +141,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 }
 
 #Catalog_Container {
-font-family: Verdana, Arial, Helvetica, sans-serif; 
 border: 1px solid red; 
 width: 550px; 
 
@@ -151,9 +150,9 @@ padding-right: 10px;
 padding-bottom: 10px;
 overflow:hidden; /*float containment*/
 }
-#Box1, #Box2, #Box3 {
+#Box {
  width: 175px;
- height: 175px;
+ height: 205px;
  margin-top: 10px;
  border: 1px solid red;
  vertical-align: top;
@@ -169,6 +168,44 @@ height: 50px;
 	height: 125px;
 	width: 125px;
 }
+#cata_botline {
+	height: 25px;
+	width:175px;
+	 vertical-align: top;
+	 overflow:hidden;
+	 margin-bottom: 5px;
+ 
+}
+#cata_price
+{
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align:top;
+	height: 25px;
+	width: 75px;
+	 display: inline-block;
+
+	overflow:hidden; /*float containment*/
+}
+#cata_addto_button
+{
+	font: 60%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	vertical-align: top;
+	height: 25px;
+	width: 75px;
+	display: inline-block;
+	border-radius: 15px;
+	background-color: #C6D580;
+	
+	text-align: center;
+	line-height: 25px;
+}
+#cata_addto_button:hover
+ { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #ADB96E;
+	color: #FFF;
+}
+
 /**Clear floats after the boxes**/
 .clearing {
 clear:both;
