@@ -152,10 +152,8 @@ padding-bottom: 10px;
 overflow:hidden; /*float containment*/
 }
 #Box1, #Box2, #Box3 {
-	alignment-adjust:middle;
-
  width: 175px;
- height: 125px;
+ height: 175px;
  margin-top: 10px;
  border: 1px solid red;
  vertical-align: top;
@@ -163,7 +161,14 @@ overflow:hidden; /*float containment*/
  *display: inline;
  zoom: 1
 }
-
+#cata_title {
+font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+height: 50px;	
+}
+#cata_img {
+	height: 125px;
+	width: 125px;
+}
 /**Clear floats after the boxes**/
 .clearing {
 clear:both;

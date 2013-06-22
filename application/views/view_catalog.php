@@ -12,8 +12,9 @@ foreach ($contents as $item)
 	?>
     
     <div id="Box<? echo $column_counter;?>" align="center">
-        <? echo $item->Prod_Type?>
-        <p><img src="../images/catalog/<? echo $item->Image?>" width="75" height="75"alt="<? echo $item->Prod_Type?>"></p>
+    <div id="cata_title"> <? echo $item->Prod_Type?></div>
+    <div id="cata_img"><img src="../images/catalog/<? echo $item->Image?>" width="125" height="125"alt="<? echo $item->Prod_Type?>"></div>
+        
     </div> <!--end Box<? echo $column_counter;?> -->
    <? $column_counter = $column_counter + 1; 
 }
