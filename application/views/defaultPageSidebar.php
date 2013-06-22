@@ -25,5 +25,6 @@
     <div class="sidebar2">
  
     <h4><strong> Schedule Your Appointment Today</strong></h4>
-    <p> Click here to schedule <a href="<?php echo base_url(); ?>front_end/appointment/schedule">online</a> .</p>
+    <p> Click here to schedule <a href="<?php base_url();?>/front_end/appointment/schedule">online</a> .</p>
     <!-- end .sidebar2 --></div>
+ 
