@@ -41,6 +41,44 @@ class Catalog extends CI_Controller {
 			
 		
 	}
+	public function updateCart()
+	{   
+		$c=1; 
+		 $data = array();
+		foreach ($this->cart->contents() as $items)
+		{
+		if(isset($_POST[$c.'[rowid]']) && isset($_POST[$c.'[qty]']))
+		{
+		 array_push($data, array('rowid' => $_POST[$c.'[rowid]'],'qty' => $_POST[$c.'[qty]']) );
+		}
+		 $c++;
+		}
+       
+ 
+
+		//$this->cart->update($data); 
+		$this->viewCart();
+	}
+	
+	public function addToCart()
+	{
+		$data = array(
+               'id'      => $_POST['Prod_ID'],
+               'qty'     => 1,
+               'price'   => $_POST['Price'],
+               'name'    => $_POST['Prod_Type'],
+            );
+		
+		$this->cart->insert($data);
+		$this->viewCart();	
+	}
+	public function viewCart()
+	{
+	    $this->load->view('defaultPageHeader');
+        $this->load->view('defaultPageSidebar');
+        $this->load->view('view_cart');
+        $this->load->view('defaultPageFooter');	
+	}
 	
 	
 }
