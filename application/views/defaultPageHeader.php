@@ -55,6 +55,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .header {
 	background-color: #ADB96E;
 	text-align:center;
+	font: 200%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	
 }
 
 /* ~~ These are the columns for the layout. ~~ 
@@ -139,6 +141,16 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 .container .header strong {
 	text-align: center;
 }
+#view_cart {
+	text-align:right;
+	float:right;
+	height: 25px;
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #ADB96E;
+	width:960px;
+
+}
+
 
 #Catalog_Container {
 
@@ -154,7 +166,7 @@ overflow:hidden; /*float containment*/
  width: 175px;
  height: 205px;
  margin-top: 10px;
-
+ border: 1px solid black;
  vertical-align: top;
  display: inline-block;
  *display: inline;
@@ -189,15 +201,16 @@ height: 50px;
 }
 #cata_addto_button
 {
+	padding: 1px;
 	font: 60%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	vertical-align: top;
+	border-style: none;
 	height: 25px;
 	width: 75px;
 	display: inline-block;
 	border-radius: 15px;
 	background-color: #C6D580;
+	vertical-align:middle;
 	
-	text-align: center;
 	line-height: 25px;
 }
 #cata_addto_button:hover
@@ -274,9 +287,8 @@ display:block;
 
 <div class="container">
     
-  <div class="header">
-      <strong>				Woodstock Veterninary Clinic</strong><!-- end .header -->
-    </div>  
+  <div class="header"><strong>Woodstock Veterninary Clinic</strong><!-- end .header --></div>  
+  <div id="view_cart"><a href="../front_end/catalog/viewCart">View Cart</a></div>
 
 
         

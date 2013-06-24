@@ -27,9 +27,7 @@ foreach ($contents as $item)
     <div id="cata_img"><img src="../images/catalog/<? echo $Image?>" width="125" height="125"alt="<? echo $Prod_Type?>"></div>
     <div id="cata_botline">
 	<div id="cata_price"><? echo $Price?></div>
-    <?php /* <a href=""><div id="cata_addto_button" onclick="document.<?php echo "form".$Prod_ID?>.submit()" >Add to Cart</div></a>*/?>
-   <div id="cata_addto_button" "><? echo form_submit('mysubmit', 'Submit Post!');?></div>
-	
+	<input type="submit" name="addto" value="Add to Cart"id="cata_addto_button" /> 
     </form>
     </div>
  	   

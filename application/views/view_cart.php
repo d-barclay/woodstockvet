@@ -10,7 +10,8 @@ echo form_open('../updateCart', array('id'=> "cart")); ?>
 <div id="cart_price">Sub-Total</div>
 </div>
 
-<?php $i = 1; ?>
+<?php $i = 1; 
+?>
 
 <?php foreach ($this->cart->contents() as $items)
 { ?>
