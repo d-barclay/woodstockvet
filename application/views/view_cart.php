@@ -29,6 +29,7 @@ echo form_open('../updateCart', array('id'=> "cart")); ?>
 ?>
 <div id="cart_line"><?php echo form_submit('cart', 'Update your Cart'); ?></div>
 <div id="cart_total"><strong>Total:       </strong>$<?php echo $this->cart->format_number($this->cart->total()); ?></div>
+<div id="cart_submit"><a href="">Checkout</a></div>
 
 
 </div>
