@@ -47,29 +47,53 @@ class Catalog extends CI_Controller {
 		 $data = array();
 		foreach ($this->cart->contents() as $items)
 		{
-		if(isset($_POST[$c.'[rowid]']) && isset($_POST[$c.'[qty]']))
-		{
-		 array_push($data, array('rowid' => $_POST[$c.'[rowid]'],'qty' => $_POST[$c.'[qty]']) );
-		}
+		
+		 array_push($data, array('rowid' => $_POST[$c.'rowid'],'qty' => $_POST[$c.'qty']) );
+
 		 $c++;
 		}
        
  
 
-		//$this->cart->update($data); 
+		$this->cart->update($data); 
+		$this->viewCart();
+	}
+	public function increaseQty($data)
+	{
+		$this->cart->update($data); 
 		$this->viewCart();
 	}
 	
 	public function addToCart()
 	{
-		$data = array(
-               'id'      => $_POST['Prod_ID'],
-               'qty'     => 1,
-               'price'   => $_POST['Price'],
-               'name'    => $_POST['Prod_Type'],
-            );
-		
-		$this->cart->insert($data);
+		 $increase = array();
+		 
+		 $Prod_ID = $_POST['Prod_ID'];
+		 $Price = $_POST['Price'];
+		 $Prod_Type = $_POST['Prod_Type'];
+		 
+		 $flag = false;
+		foreach ($this->cart->contents() as $items)
+		{
+			if (strcmp($items['name'],$Prod_Type) == 0)
+			{
+				$qty = $items['qty'] + 1;
+				$flag = true;
+				$this->cart->update(array('rowid' => $items['rowid'],'qty' => $qty ) );
+			}
+			
+		}
+		if(!$flag)
+		{
+			$data = array(
+				   'id'      => $Prod_ID,
+				   'qty'     => 1,
+				   'price'   => $Price,
+				   'name'    => $Prod_Type,
+				);
+			
+			$this->cart->insert($data);
+		}
 		$this->viewCart();	
 	}
 	public function viewCart()

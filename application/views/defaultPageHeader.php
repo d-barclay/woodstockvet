@@ -141,7 +141,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 }
 
 #Catalog_Container {
-border: 1px solid red; 
+
 width: 550px; 
 
 margin-top:25px;
@@ -154,7 +154,7 @@ overflow:hidden; /*float containment*/
  width: 175px;
  height: 205px;
  margin-top: 10px;
- border: 1px solid red;
+
  vertical-align: top;
  display: inline-block;
  *display: inline;
@@ -205,6 +205,57 @@ height: 50px;
 	background-color: #ADB96E;
 	color: #FFF;
 }
+#cart_line
+{
+	display: inline-block;
+
+	overflow:hidden; /*float containment*/
+	margin: 5px;
+	width:550px;
+}
+#cart_qty
+{
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	vertical-align:top;
+	height: 25px;
+	width: 50px;
+	 display: inline-block;
+
+
+}
+#cart_desc
+{
+font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	vertical-align:top;
+	height: 25px;
+	width: 300px;
+	 display: inline-block;
+
+	overflow:hidden; /*float containment*/
+}
+#cart_price
+{
+	
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+	vertical-align:top;
+	height: 25px;
+	width: 90px;
+	 display: inline-block;
+
+	overflow:hidden; /*float containment*/
+}
+#cart_total
+{
+
+	text-align: right;
+	position:relative;
+	height: 50px;
+	width: 550px;
+}
+
 
 /**Clear floats after the boxes**/
 .clearing {
