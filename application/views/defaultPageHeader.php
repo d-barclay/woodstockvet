@@ -268,6 +268,10 @@ font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	height: 50px;
 	width: 550px;
 }
+#cart_submit
+{
+float: right;
+}
 
 
 /**Clear floats after the boxes**/
